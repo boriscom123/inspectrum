@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    line-height: 100%;
+    user-select: none;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $MainFontFamilyLogo;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color-font-primary;
+    margin: 0;
+}
+ul,
+ol{
+    padding: 0;
+    list-style: none;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    appearance: none;
+}
+input {
+    appearance: none;
+    cursor: pointer;
+}
+select {
+    cursor: pointer;
+}
+label {
+    cursor: pointer;
+}
+img {
+    display: flex;
+}
+
+.transition {
+    transition: $transition;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}

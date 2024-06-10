@@ -1,0 +1,18 @@
+.admin-panel-main {
+    flex-grow: 1;
+    padding: 20px 20px 0 370px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(27, 37, 59, 1);
+
+    > .container {
+        display: flex;
+        flex-grow: 1;
+        background-color: white;
+        border-radius: 20px;
+
+        > .container-content {
+            width: 100%;
+        }
+    }
+}

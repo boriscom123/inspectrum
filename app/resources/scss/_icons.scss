@@ -1,0 +1,114 @@
+#phone-volume-solid-test {
+    fill: white;
+
+    &:hover {
+        fill: #4caf50;
+    }
+}
+
+.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-phone-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/phone-solid.svg");
+    background-size: 60% 60%;
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/phone-volume-solid.svg");
+    }
+}
+
+.icon-phone-volume-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/phone-volume-solid.svg");
+    background-size: 60% 60%;
+}
+
+.icon-location-dot-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/main/location-dot-solid.svg");
+    background-size: 60% 60%;
+}
+
+.icon-bars-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/bars-solid.svg");
+    background-size: 60% 60%;
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/bars-staggered-solid.svg");
+    }
+}
+
+.icon-vk-logo-white {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/logo/vk-logo-white.svg");
+    background-size: 100% 100%;
+}
+
+.icon-logo-text-white {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/logo/logo-text-white.png");
+    background-size: contain;
+}
+
+.icon-check {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/logo/check.png");
+}
+
+.icon-minus {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/logo/minus.png");
+}
+
+.icon-sun-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/sun-regular.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/sun-regular.svg");
+    }
+}
+
+.icon-moon-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/moon-regular.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/moon-regular.svg");
+    }
+}
+
+.icon-eye-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/black/eye-regular.svg");
+}
+
+.icon-eye-slash-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/black/eye-slash-regular.svg");
+}
+
+.icon-chevron-right-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/chevron-right-solid.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/chevron-right-solid.svg");
+    }
+}
+
+.icon-right-from-bracket-solid {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/right-from-bracket-solid.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/white/right-from-bracket-solid.svg");
+    }
+}
+
+.icon-pen-to-square-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/pen-to-square-regular.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/main/pen-to-square-regular.svg");
+    }
+}
+
+.icon-trash-can-regular {
+    background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/silver/trash-can-regular.svg");
+
+    &:hover {
+        background-image: url("https://storage.yandexcloud.net/storage.inspectrum.ru/icons/main/trash-can-regular.svg");
+    }
+}

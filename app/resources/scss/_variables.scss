@@ -1,0 +1,31 @@
+//Breakpoints
+$bp-ssm: 350px; // ≥ 350px
+$bp-sm: 576px; // ≥ 576px
+$bp-md: 768px; // ≥ 768px
+$bp-lg: 992px; // ≥ 992px
+$bp-xl: 1200px; // ≥ 1200px
+$bp-xxl: 1400px; // ≥ 1400px
+
+// Colors
+$color-primary: rgba(228, 0, 69, 1); // #e40045
+$color-primary-darken: rgba(202, 1, 60, 1); // #ca013c
+$color-alter: #ffffff;
+$color-header-bg: #ffffff;
+$color-footer-bg: #353535;
+
+// Font Colors
+$color-font-primary: rgba(46, 58, 89, 1); // #2e3a59
+$font-bg-color: #000000;
+
+// Transition
+$transition: 0.3s;
+
+// Fonts
+$MainFontFamilyLogo: 'PF DinDisplay Pro', sans-serif;
+$fontSize: 16px;
+$fontWeight: 400;
+
+// Shadow
+$shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+$shadow-hover: 0 0 10px 10px rgba(0,0,0,0.3);
+

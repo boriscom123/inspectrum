@@ -1,0 +1,191 @@
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    > .site-footer-links {
+
+        > .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+
+            > .container-content {
+                width: 100%;
+                background-color: #f3f3f3;
+                display: flex;
+                border-radius: 10px 10px 10px 10px;
+                padding: 30px 60px 30px 60px;
+
+                @media (max-width: $bp-xxl) {
+                    border-radius: unset;
+                }
+                @media (max-width: $bp-xl) {
+                    padding: 30px 20px 30px 20px;
+                }
+                @media (max-width: 350px) {
+                    padding: 20px 10px 20px 10px;
+                }
+
+                > .footer-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    > div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        > .title-link {
+
+                            > a {
+                                font-size: 1.1rem;
+                                font-weight: bold;
+                                color: $font-bg-color;
+                                transition: $transition;
+
+                                &:hover {
+                                    border-bottom: 1px solid $font-bg-color;
+                                }
+
+                                @media (max-width: $bp-xl) {
+                                    font-size: 1rem;
+                                }
+
+                                @media (max-width: 350px) {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+
+                        > .list {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            gap: 10px;
+
+                            > div {
+                                min-height: 30px;
+                                padding: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid silver;
+                                border-radius: 15px;
+                                transition: $transition;
+
+                                &:hover {
+                                    background-color: silver;
+                                }
+
+                                > a {
+                                    font-size: 1rem;
+                                    color: $font-bg-color;
+
+                                    @media (max-width: 350px) {
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .site-footer-end {
+
+        > .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+
+            > .container-content {
+                width: 100%;
+                background-color: $color-footer-bg;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 10px 10px 0 0;
+                padding: 30px 60px 0 60px;
+
+                @media (max-width: 1400px) {
+                    border-radius: unset;
+                }
+                @media (max-width: 1200px) {
+                    padding: 30px 20px 0 20px;
+                }
+                @media (max-width: 350px) {
+                    padding: 30px 10px 0 10px;
+                }
+
+                > .footer-about {
+                    display: flex;
+                    gap: 20px;
+                    color: white;
+
+                    @media (max-width: $bp-md) {
+                        flex-wrap: wrap;
+                    }
+                    @media (max-width: $bp-sm) {
+                        flex-direction: column;
+                    }
+
+                    > div {
+                        width: 100%;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+
+                        @media (max-width: $bp-md) {
+                            width: calc((100% / 2) - 10px);
+                        }
+                        @media (max-width: $bp-sm) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                > .developer-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    > div {
+                        color: $color-footer-bg;
+                        padding: 1px;
+
+                        > a {
+                            color: $color-footer-bg;
+                        }
+
+                        > .media {
+                            height: 50px;
+                            width: 50px;
+                            min-width: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            > a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 30px;
+                                width: 30px;
+                                min-width: 30px;
+                                transition: $transition;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

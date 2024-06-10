@@ -1,0 +1,75 @@
+services:
+  php:
+    build: ./docker/php/config/${SERVER_LOCATION}
+    container_name: ${APP_NAME}-php
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ./app:/var/www/app
+      - ./docker/php/config/${SERVER_LOCATION}/php.ini:/usr/local/etc/php/php.ini
+    restart: unless-stopped
+    networks:
+      - inspectrum
+
+  nginx:
+    build: ./docker/nginx
+    container_name: ${APP_NAME}-nginx
+    ports:
+      - "80:80"
+#      - "443:443"
+      - "8080:8080"
+#      - "8443:8443"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/config/${SERVER_LOCATION}/default.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/config/${SERVER_LOCATION}/default.conf.template:/etc/nginx/templates/default.conf.template
+      - ./docker/nginx/log:/var/log/nginx
+      - ./docker/ssl:/etc/nginx/ssl/:ro
+    depends_on:
+      - php
+    environment:
+      - NGINX_HOST=${SERVER_NAME}
+    restart: on-failure
+    networks:
+      - inspectrum
+
+  mysql:
+    build: ./docker/mysql
+    container_name: ${APP_NAME}-mysql
+    command: --default-authentication-plugin=caching_sha2_password
+    volumes:
+      - ./docker/mysql/data/:/var/lib/mysql
+      - ./docker/mysql/dumps/:/dumps
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    restart: always
+    networks:
+      - inspectrum
+
+  phpmyadmin:
+    build: ./docker/phpmyadmin
+    container_name: ${APP_NAME}-phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+    networks:
+      - inspectrum
+
+  node:
+    build: ./docker/node
+    container_name: ${APP_NAME}-node
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - NPM_CONFIG_LOGLEVEL=${NPM_CONFIG_LOGLEVEL}
+    working_dir: /home/node/app
+    volumes:
+      - ./app:/home/node/app
+    networks:
+      - inspectrum
+
+networks:
+  inspectrum:
+    driver: bridge
